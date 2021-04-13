@@ -100,7 +100,7 @@ namespace Sports
             _hoogte = hoogte;
             _nummer = nummer;
             _matches = matches;
-            _hoogsteScore = hoogste;
+            HoogsteScore = hoogste;
         }
 
     }
