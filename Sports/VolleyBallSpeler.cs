@@ -6,9 +6,17 @@ using System.Threading.Tasks;
 
 namespace Sports
 {
+    public enum Klasses
+    {
+        Eerste,
+        Tweede,
+        Derde,
+        Vierde
+    }
+
     class VolleyBallSpeler
     {
-        private string _naam;
+        private string _naam = "Speler";
 
         public string Naam
         {
@@ -25,24 +33,24 @@ namespace Sports
             }
         }
 
-        private double _hoogte;
+        private double _lengte = 1.7;
 
-        public double Hoogte
+        public double Lengte
         {
             get 
             {
-                return _hoogte; 
+                return _lengte; 
             }
             set 
             {
                 if(value > 0.0)
                 {
-                    _hoogte = value; 
+                    _lengte = value; 
                 }
             }
         }
 
-        private int _nummer;
+        private int _nummer = 1;
 
         public int Nummer
         {
@@ -59,7 +67,7 @@ namespace Sports
             }
         }
 
-        private int _matches;
+        private int _matches = 0;
 
         public int Matches
         {
@@ -76,7 +84,7 @@ namespace Sports
             }
         }
 
-        private int _hoogsteScore;
+        private int _hoogsteScore = 0;
 
         public int HoogsteScore
         {
@@ -92,16 +100,58 @@ namespace Sports
                 }
             }
         }
-            
 
-        public void StelIn(string naam, double hoogte, int nummer, int matches, int hoogste)
+        private Klasses _klasse;
+
+        public Klasses Klasse
         {
-            _naam = naam;
-            _hoogte = hoogte;
-            _nummer = nummer;
-            _matches = matches;
-            HoogsteScore = hoogste;
+            get 
+            { 
+                return _klasse; 
+            }
+            set 
+            { 
+                _klasse = value; 
+            }
         }
 
+
+
+        public void StelIn(string naam, double hoogte, int nummer, int matches, int hoogste, Klasses klasse)
+        {
+            Naam = naam;
+            Lengte = hoogte;
+            Nummer = nummer;
+            Matches = matches;
+            HoogsteScore = hoogste;
+            Klasse = klasse;
+        }
+
+        public void SpeelMatch()
+        {
+            _matches++;
+            Console.WriteLine($"Speler {Nummer} begint aan de match. Nieuw totaal: {Matches}.");
+        }
+
+        public void Pass(int speler)
+        {
+            if(speler > 0 && speler < 7)
+            {
+                Console.WriteLine($"Speler {Nummer} maakt een pass naar speler {speler}.");
+            }
+            else
+            {
+                Console.WriteLine($"Speler {Nummer} maakt een pass, niemand vangt de bal op.");
+            }
+        }
+
+        public void VerwerkScore(int score)
+        {
+            if(score > HoogsteScore)
+            {
+                HoogsteScore = score;
+            }
+            Console.WriteLine($"Speler {Nummer} scoorde {score} punten in deze match. Hun hoogste score is {HoogsteScore}.");
+        }
     }
 }
