@@ -6,16 +6,17 @@ using System.Threading.Tasks;
 
 namespace StudentKlasse
 {
+    public enum Klassen
+    {
+        EA1,
+        EA2,
+        EA3,
+        EA4,
+        EA5
+    }
+
     class Student
     {
-        public enum Klassen
-        {
-            EA1,
-            EA2,
-            EA3,
-            EA4,
-            EA5
-        }
 
         public string Naam { get; set; }
         public int Leeftijd { get; set; }

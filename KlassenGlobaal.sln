@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Figuren", "Figuren\Figuren.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sports", "Sports\Sports.csproj", "{4BE5D7E3-5B28-441F-86C7-3BDC57FBF03C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankManager", "BankManager\BankManager.csproj", "{DED11BF2-B671-4A85-A47B-EA01427BD02B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{4BE5D7E3-5B28-441F-86C7-3BDC57FBF03C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BE5D7E3-5B28-441F-86C7-3BDC57FBF03C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BE5D7E3-5B28-441F-86C7-3BDC57FBF03C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DED11BF2-B671-4A85-A47B-EA01427BD02B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DED11BF2-B671-4A85-A47B-EA01427BD02B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DED11BF2-B671-4A85-A47B-EA01427BD02B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DED11BF2-B671-4A85-A47B-EA01427BD02B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
