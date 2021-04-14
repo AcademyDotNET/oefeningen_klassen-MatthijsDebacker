@@ -19,6 +19,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankManager", "BankManager\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetlat", "Meetlat\Meetlat.csproj", "{C7DD6CBA-FB1A-46D6-9AD8-000769EF567C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.csproj", "{63BF180F-7C48-4E45-9A6A-9A3109D23C39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTester", "PokemonTester\PokemonTester.csproj", "{3032045B-0828-4397-B081-BE8648378D32}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +61,14 @@ Global
 		{C7DD6CBA-FB1A-46D6-9AD8-000769EF567C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7DD6CBA-FB1A-46D6-9AD8-000769EF567C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7DD6CBA-FB1A-46D6-9AD8-000769EF567C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63BF180F-7C48-4E45-9A6A-9A3109D23C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63BF180F-7C48-4E45-9A6A-9A3109D23C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63BF180F-7C48-4E45-9A6A-9A3109D23C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63BF180F-7C48-4E45-9A6A-9A3109D23C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3032045B-0828-4397-B081-BE8648378D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3032045B-0828-4397-B081-BE8648378D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3032045B-0828-4397-B081-BE8648378D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3032045B-0828-4397-B081-BE8648378D32}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
