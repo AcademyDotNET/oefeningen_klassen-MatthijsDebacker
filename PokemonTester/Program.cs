@@ -116,65 +116,52 @@ namespace PokemonTester
             int health1 = pokemon1.HP_Full;
             int health2 = pokemon2.HP_Full;
             int damage = 0;
+            Pokemon first, second;
 
-            if (pokemon1.Speed_Full >= pokemon2.Speed_Full)
+            if(pokemon1.Speed_Full >= pokemon2.Speed_Full)
             {
-                Console.WriteLine($"{pokemon2.Name} attacks first!");
-                while (health1 > 0 && health2 > 0)
-                {
-                    damage = Math.Clamp((-pokemon1.Attack_Full + pokemon2.Defence_Full), int.MinValue, 0);
-                    health2 += damage;
-                    Console.WriteLine($"{pokemon1.Name} hits {pokemon2.Name} with {damage} damage, its super effective.");
-                    if (health2 < 0)
-                    {
-                        return 1;
-                    }
-
-                    damage = Math.Clamp((-pokemon2.Attack_Full + pokemon1.Defence_Full), int.MinValue, 0);
-                    health1 += damage;
-                    Console.WriteLine($"{pokemon2.Name} hits {pokemon1.Name} with {damage} damage, its super effective.");
-                    if (health1 < 0)
-                    {
-                        return 2;
-                    }
-
-                    if(health1 == pokemon1.HP_Full && health2 == pokemon2.HP_Full)
-                    {
-                        Console.WriteLine("The defences are too high, no damage is being done.");
-                        return 0;
-                    }
-                }
+                first = pokemon1;
+                second = pokemon2;
             }
             else
             {
-                Console.WriteLine($"{pokemon2.Name} attacks first!");
-                while (health1 > 0 && health2 > 0)
+                first = pokemon2;
+                second = pokemon1;
+            }
+            Console.WriteLine($"{first.Name} attacks first!");
+
+            while (health1 > 0 && health2 > 0)
+            {
+                damage = Math.Clamp((-first.Attack_Full + second.Defence_Full), int.MinValue, 0);
+                health2 += damage;
+                Console.WriteLine($"{first.Name} hits {second.Name} with {Math.Abs(damage)} damage, its super effective.");
+                if (health2 < 0)
                 {
-                    damage = Math.Clamp((-pokemon2.Attack_Full + pokemon1.Defence_Full), int.MinValue, 0);
-                    health1 += damage;
-                    Console.WriteLine($"{pokemon2.Name} hits {pokemon1.Name} with {damage} damage, its super effective.");
-                    if (health1 < 0)
-                    {
-                        return 2;
-                    }
+                    return 1;
+                }
+                else if (health1 < 0)
+                {
+                    return 2;
+                }
 
-                    damage = Math.Clamp((-pokemon1.Attack_Full + pokemon2.Defence_Full), int.MinValue, 0);
-                    health2 += damage;
-                    Console.WriteLine($"{pokemon1.Name} hits {pokemon2.Name} with {damage} damage, its super effective.");
-                    if (health2 < 0)
-                    {
-                        return 1;
-                    }
+                damage = Math.Clamp((-second.Attack_Full + first.Defence_Full), int.MinValue, 0);
+                health1 += damage;
+                Console.WriteLine($"{second.Name} hits {first.Name} with {Math.Abs(damage)} damage, its super effective.");
+                if (health2 < 0)
+                {
+                    return 1;
+                }
+                else if (health1 < 0)
+                {
+                    return 2;
+                }
 
-                    if (health1 == pokemon1.HP_Full && health2 == pokemon2.HP_Full)
-                    {
-                        Console.WriteLine("The defences are too high, no damage is being done.");
-                        return 0;
-                    }
+                if (health1 == pokemon1.HP_Full && health2 == pokemon2.HP_Full)
+                {
+                    Console.WriteLine("The defences are too high, no damage is being done.");
+                    return 0;
                 }
             }
-
-
             return 0;
         }
     }

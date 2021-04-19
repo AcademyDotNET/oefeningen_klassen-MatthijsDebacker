@@ -17,11 +17,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sports", "Sports\Sports.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankManager", "BankManager\BankManager.csproj", "{DED11BF2-B671-4A85-A47B-EA01427BD02B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Meetlat", "Meetlat\Meetlat.csproj", "{C7DD6CBA-FB1A-46D6-9AD8-000769EF567C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Meetlat", "Meetlat\Meetlat.csproj", "{C7DD6CBA-FB1A-46D6-9AD8-000769EF567C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokemon", "Pokemon\Pokemon.csproj", "{63BF180F-7C48-4E45-9A6A-9A3109D23C39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon", "Pokemon\Pokemon.csproj", "{63BF180F-7C48-4E45-9A6A-9A3109D23C39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonTester", "PokemonTester\PokemonTester.csproj", "{3032045B-0828-4397-B081-BE8648378D32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonTester", "PokemonTester\PokemonTester.csproj", "{3032045B-0828-4397-B081-BE8648378D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetlatConstructor", "MeetlatConstructor\MeetlatConstructor.csproj", "{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportSimulator", "SportSimulator\SportSimulator.csproj", "{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +73,14 @@ Global
 		{3032045B-0828-4397-B081-BE8648378D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3032045B-0828-4397-B081-BE8648378D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3032045B-0828-4397-B081-BE8648378D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
