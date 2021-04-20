@@ -72,7 +72,7 @@ namespace StudentOrganizer
             Console.WriteLine("Name: ");
             list[input].Naam = Console.ReadLine();
             list[input].Leeftijd = AskForInt("Age: ");
-            list[input].Klas = (Klassen)Math.Clamp(AskForInt("Class (1 - 4): "), 1, 4);
+            list[input].Klas = (Klassen)Math.Clamp(AskForInt("Class EA(1 - 4): "), 1, 4);
             list[input].PuntenCommunicatie = Math.Clamp(AskForInt("Grade for Communication (0 - 20): "), 0, 20);
             list[input].PuntenProgrammingPrinciples = Math.Clamp(AskForInt("Grade for Programming Principles (0 - 20): "), 0, 20);
             list[input].PuntenWebTech = Math.Clamp(AskForInt("Grade for Web Tech (0 - 20): "), 0, 20);
