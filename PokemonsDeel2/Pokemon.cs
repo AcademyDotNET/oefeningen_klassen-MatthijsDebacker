@@ -107,8 +107,8 @@ namespace PokemonsDeel2
                 for (int i = 0; i < level; i++)
                 {
                     Level++;
+                    LevelIncreases++;
                 }
-                LevelIncreases++;
             }
             else if(NoLevelingAllowed)
             {

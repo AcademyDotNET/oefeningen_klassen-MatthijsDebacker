@@ -23,13 +23,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokemon", "Pokemon\Pokemon.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonTester", "PokemonTester\PokemonTester.csproj", "{3032045B-0828-4397-B081-BE8648378D32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MeetlatConstructor", "MeetlatConstructor\MeetlatConstructor.csproj", "{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MeetlatConstructor", "MeetlatConstructor\MeetlatConstructor.csproj", "{58905D09-F6C1-4FEE-996F-DE7BC48DB7A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SportSimulator", "SportSimulator\SportSimulator.csproj", "{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SportSimulator", "SportSimulator\SportSimulator.csproj", "{EAB4F9BF-927B-4C3E-BE14-3720C1585ECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonsDeel2", "PokemonsDeel2\PokemonsDeel2.csproj", "{AAFFFF53-0BD5-429E-90C4-02F325872BD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonsDeel2", "PokemonsDeel2\PokemonsDeel2.csproj", "{AAFFFF53-0BD5-429E-90C4-02F325872BD0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitaleKluis", "DigitaleKluis\DigitaleKluis.csproj", "{7BF06059-032B-48D0-B625-FC904C98EE0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigitaleKluis", "DigitaleKluis\DigitaleKluis.csproj", "{7BF06059-032B-48D0-B625-FC904C98EE0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrijzenMetForeach", "PrijzenMetForeach\PrijzenMetForeach.csproj", "{E2CB2C6F-AEA9-46FD-8B6B-388EF8DB9702}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Speelkaarten", "Speelkaarten\Speelkaarten.csproj", "{A3A30DBA-668C-4F25-AA34-BE966DE48F13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentOrganizer", "StudentOrganizer\StudentOrganizer.csproj", "{21CC4E42-62FE-4329-B147-1FDDCA4C2D7B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +99,18 @@ Global
 		{7BF06059-032B-48D0-B625-FC904C98EE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BF06059-032B-48D0-B625-FC904C98EE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BF06059-032B-48D0-B625-FC904C98EE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2CB2C6F-AEA9-46FD-8B6B-388EF8DB9702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2CB2C6F-AEA9-46FD-8B6B-388EF8DB9702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2CB2C6F-AEA9-46FD-8B6B-388EF8DB9702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2CB2C6F-AEA9-46FD-8B6B-388EF8DB9702}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3A30DBA-668C-4F25-AA34-BE966DE48F13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3A30DBA-668C-4F25-AA34-BE966DE48F13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3A30DBA-668C-4F25-AA34-BE966DE48F13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3A30DBA-668C-4F25-AA34-BE966DE48F13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21CC4E42-62FE-4329-B147-1FDDCA4C2D7B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21CC4E42-62FE-4329-B147-1FDDCA4C2D7B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21CC4E42-62FE-4329-B147-1FDDCA4C2D7B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21CC4E42-62FE-4329-B147-1FDDCA4C2D7B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
