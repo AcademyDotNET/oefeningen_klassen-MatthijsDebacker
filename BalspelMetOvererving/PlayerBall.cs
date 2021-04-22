@@ -8,9 +8,8 @@ namespace BalspelMetOvererving
 {
     class PlayerBall : Ball
     {
-        public PlayerBall(int xin, int yin, int vxin, int vyin) : base(xin, yin, vxin, vyin)
+        public PlayerBall(int xin, int yin, int vxin, int vyin, char drawCharIn = 'X', int sizeIn = 0) : base(xin, yin, vxin, vyin, drawCharIn, sizeIn)
         {
-            drawChar = 'X';
             drawColor = ConsoleColor.Green;
         }
 

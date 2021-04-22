@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace BalspelMetOvererving
 {
@@ -7,18 +8,25 @@ namespace BalspelMetOvererving
         static void Main(string[] args)
         {
             Console.CursorVisible = false;
-            Console.WindowHeight = 20;
-            Console.WindowWidth = 30;
-            Ball b1 = new Ball(4, 4, 1, 0);
-            PlayerBall player = new PlayerBall(10, 10, 0, 0);
+            Console.WindowHeight = 50;
+            Console.WindowWidth = 60;
+
+            List<Ball> enemies = new List<Ball>();
+            enemies.Add(new Ball(4, 4, 1, 0));
+            enemies.Add(new Ball(40, 4, 0, 1));
+            enemies.Add(new Ball(4, 40, 1, 1));
+            PlayerBall player = new PlayerBall(10, 10, 0, 0, 'X', 3);
             while (true)
             {
 
-                Console.Clear();
+                //Console.Clear();
 
                 //Ball
-                b1.Update();
-                b1.Draw();
+                foreach (Ball ball in enemies)
+                {
+                    ball.Update();
+                    ball.Draw();
+                }
 
                 //SpelerBall
                 if (Console.KeyAvailable)
@@ -31,13 +39,29 @@ namespace BalspelMetOvererving
                 player.Draw();
 
                 //Check collisions
-                if (Ball.CheckHit(b1, player))
+                foreach (Ball ball in enemies)
                 {
-                    Console.Clear();
-                    Console.WriteLine("Gewonnen!");
-                    Console.ReadLine();
+
+                    if (Ball.CheckHit(ball, player))
+                    {
+                        Console.Clear();
+                        Console.WriteLine("Gewonnen!");
+                        Console.ReadLine();
+                    }
                 }
-                System.Threading.Thread.Sleep(100);
+
+                for (int i = 0; i < enemies.Count; i++)
+                {
+                    for (int j = 0; j < enemies.Count; j++)
+                    {
+                        if(i != j)
+                        {
+                            Ball.CheckHit(enemies[i], enemies[j], true);
+                        }
+                    }
+                }
+
+                System.Threading.Thread.Sleep(30);
             }
         }
     }
