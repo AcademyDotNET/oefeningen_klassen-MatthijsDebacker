@@ -59,6 +59,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeometricFigures", "Geometr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Advanced Overerving", "Advanced Overerving", "{0DDA049F-CB5D-4512-BCC4-587686C58A12}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dierentuin", "Dierentuin\Dierentuin.csproj", "{5A8BCB93-722D-42BE-B79B-81812B15D79E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -173,6 +175,10 @@ Global
 		{4B104A2D-4B01-42A4-85FB-492829857A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4B104A2D-4B01-42A4-85FB-492829857A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4B104A2D-4B01-42A4-85FB-492829857A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A8BCB93-722D-42BE-B79B-81812B15D79E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A8BCB93-722D-42BE-B79B-81812B15D79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A8BCB93-722D-42BE-B79B-81812B15D79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A8BCB93-722D-42BE-B79B-81812B15D79E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -183,6 +189,7 @@ Global
 		{C0E25CDB-E263-4EC9-BB09-7807E5ADF1DC} = {0DDA049F-CB5D-4512-BCC4-587686C58A12}
 		{3A5160AC-3153-4E1F-BAA1-FC7CF71BFDC6} = {0DDA049F-CB5D-4512-BCC4-587686C58A12}
 		{4B104A2D-4B01-42A4-85FB-492829857A03} = {0DDA049F-CB5D-4512-BCC4-587686C58A12}
+		{5A8BCB93-722D-42BE-B79B-81812B15D79E} = {0DDA049F-CB5D-4512-BCC4-587686C58A12}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C3018DB-C0D9-4834-AD3A-C3FADDD3A9C9}
