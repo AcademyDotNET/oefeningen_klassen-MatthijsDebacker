@@ -39,13 +39,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StudentOrganizer", "Student
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookmarkManager", "BookmarkManager\BookmarkManager.csproj", "{60BCFE77-D98B-4BB6-B481-9507E8EF1525}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HetDierenrijk", "HetDierenrijk\HetDierenrijk.csproj", "{60E3C703-96EA-4BFE-A738-DA423CD719D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HetDierenrijk", "HetDierenrijk\HetDierenrijk.csproj", "{60E3C703-96EA-4BFE-A738-DA423CD719D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ziekenhuis", "Ziekenhuis\Ziekenhuis.csproj", "{C4E06BCC-6474-417F-918F-A9F3E03940DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ziekenhuis", "Ziekenhuis\Ziekenhuis.csproj", "{C4E06BCC-6474-417F-918F-A9F3E03940DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HiddenBookmark", "HiddenBookmark\HiddenBookmark.csproj", "{0B5381AA-9B1E-44D4-8E33-9B1ADADF71A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HiddenBookmark", "HiddenBookmark\HiddenBookmark.csproj", "{0B5381AA-9B1E-44D4-8E33-9B1ADADF71A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BalspelMetOvererving", "BalspelMetOvererving\BalspelMetOvererving.csproj", "{516FA9BF-244D-4DD1-AEBE-616ADF206F9B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BalspelMetOvererving", "BalspelMetOvererving\BalspelMetOvererving.csproj", "{516FA9BF-244D-4DD1-AEBE-616ADF206F9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonExtra", "PokemonExtra\PokemonExtra.csproj", "{C5871DAA-5F79-488C-B722-A9ABE9654622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookmarkExtra", "BookmarkExtra\BookmarkExtra.csproj", "{376502C1-C196-4FB7-979B-15BA7DAF95AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Book", "Book\Book.csproj", "{C0E25CDB-E263-4EC9-BB09-7807E5ADF1DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +147,18 @@ Global
 		{516FA9BF-244D-4DD1-AEBE-616ADF206F9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{516FA9BF-244D-4DD1-AEBE-616ADF206F9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{516FA9BF-244D-4DD1-AEBE-616ADF206F9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5871DAA-5F79-488C-B722-A9ABE9654622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5871DAA-5F79-488C-B722-A9ABE9654622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5871DAA-5F79-488C-B722-A9ABE9654622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5871DAA-5F79-488C-B722-A9ABE9654622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{376502C1-C196-4FB7-979B-15BA7DAF95AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{376502C1-C196-4FB7-979B-15BA7DAF95AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{376502C1-C196-4FB7-979B-15BA7DAF95AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{376502C1-C196-4FB7-979B-15BA7DAF95AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E25CDB-E263-4EC9-BB09-7807E5ADF1DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E25CDB-E263-4EC9-BB09-7807E5ADF1DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E25CDB-E263-4EC9-BB09-7807E5ADF1DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E25CDB-E263-4EC9-BB09-7807E5ADF1DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -22,7 +22,7 @@ namespace PokemonsDeel2
             pokemon4.ShowInfo();
             Console.WriteLine();
             Pokemon pokemon5 = Pokemon.GeneratePokemon("Dibbydoo", "Water", 14);
-            pokemon5.ShowInfo();
+            Console.WriteLine(pokemon5.ToString());
             Console.WriteLine();
 
             int result = Pokemon.Battle(pokemon4, pokemon5);
