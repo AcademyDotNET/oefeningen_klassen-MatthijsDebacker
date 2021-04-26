@@ -69,6 +69,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Politiek", "Politiek\Politi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Moederbord", "Moederbord\Moederbord.csproj", "{E7078CA9-DE16-445F-8733-255CA450CD60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EenEigenHuis", "EenEigenHuis\EenEigenHuis.csproj", "{6E5A3F2F-58E9-4E8F-8C35-6D93D58B6FD9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -199,6 +201,10 @@ Global
 		{E7078CA9-DE16-445F-8733-255CA450CD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E7078CA9-DE16-445F-8733-255CA450CD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E7078CA9-DE16-445F-8733-255CA450CD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E5A3F2F-58E9-4E8F-8C35-6D93D58B6FD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E5A3F2F-58E9-4E8F-8C35-6D93D58B6FD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E5A3F2F-58E9-4E8F-8C35-6D93D58B6FD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E5A3F2F-58E9-4E8F-8C35-6D93D58B6FD9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -213,6 +219,7 @@ Global
 		{C472147D-B9B9-4E4A-9E08-B0D9F1FF4B7F} = {D202796B-4BD0-457E-AB48-2835A234FC14}
 		{44793158-2B16-4601-9760-1AA3117C830E} = {D202796B-4BD0-457E-AB48-2835A234FC14}
 		{E7078CA9-DE16-445F-8733-255CA450CD60} = {D202796B-4BD0-457E-AB48-2835A234FC14}
+		{6E5A3F2F-58E9-4E8F-8C35-6D93D58B6FD9} = {D202796B-4BD0-457E-AB48-2835A234FC14}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C3018DB-C0D9-4834-AD3A-C3FADDD3A9C9}
