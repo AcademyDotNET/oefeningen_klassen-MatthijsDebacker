@@ -15,7 +15,7 @@ namespace Ziekenhuis
 
         public override double CalculateCost()
         {
-            return (50 + 200 * Hours) * 0.9;
+            return (50 + 20 * Hours) * 0.9;
         }
     }
 }

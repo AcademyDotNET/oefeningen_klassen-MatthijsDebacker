@@ -19,7 +19,7 @@ namespace Ziekenhuis
 
         public virtual double CalculateCost()
         {
-            return 50 + 200 * Hours;
+            return 50 + 20 * Hours;
         }
 
         public virtual void ShowInfo()

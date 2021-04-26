@@ -25,7 +25,7 @@ namespace MoneyMoneyMoney
 
         public void TakeMoney(double amount)
         {
-            balance += amount;
+            balance -= amount;
         }
 
         public abstract double CalculateIntrest();
