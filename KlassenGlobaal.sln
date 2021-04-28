@@ -77,13 +77,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TextbasedRPG", "TextbasedRP
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Polymorpism", "Polymorpism", "{3F77221B-45A5-4DBE-B1D5-4C2DB7413C23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DierentuinAdvanced", "DierentuinAdvanced\DierentuinAdvanced.csproj", "{427F05DF-A1EA-40C6-B28B-2A4FD5EDBEDE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DierentuinAdvanced", "DierentuinAdvanced\DierentuinAdvanced.csproj", "{427F05DF-A1EA-40C6-B28B-2A4FD5EDBEDE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonsVergelijken", "PokemonsVergelijken\PokemonsVergelijken.csproj", "{DEE08EE3-D4BF-427E-802B-76A5E0DC8E01}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PokemonsVergelijken", "PokemonsVergelijken\PokemonsVergelijken.csproj", "{DEE08EE3-D4BF-427E-802B-76A5E0DC8E01}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magic", "Magic\Magic.csproj", "{64569887-7763-408C-A3A2-9CC129717EBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Magic", "Magic\Magic.csproj", "{64569887-7763-408C-A3A2-9CC129717EBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapMaker", "MapMaker\MapMaker.csproj", "{05762C90-0680-41EF-8B13-C71AEDCFFECD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MapMaker", "MapMaker\MapMaker.csproj", "{05762C90-0680-41EF-8B13-C71AEDCFFECD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{7398605D-B477-4A79-B8EB-164A27F0FCB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FiguresWithInterfaces", "FiguresWithInterfaces\FiguresWithInterfaces.csproj", "{2D82FC7C-2632-4D97-8ACC-C4B69825940B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game\Game.csproj", "{8E6C98AB-9708-418A-A03E-87CA0F6F952F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -239,6 +245,14 @@ Global
 		{05762C90-0680-41EF-8B13-C71AEDCFFECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{05762C90-0680-41EF-8B13-C71AEDCFFECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{05762C90-0680-41EF-8B13-C71AEDCFFECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D82FC7C-2632-4D97-8ACC-C4B69825940B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D82FC7C-2632-4D97-8ACC-C4B69825940B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D82FC7C-2632-4D97-8ACC-C4B69825940B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D82FC7C-2632-4D97-8ACC-C4B69825940B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E6C98AB-9708-418A-A03E-87CA0F6F952F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E6C98AB-9708-418A-A03E-87CA0F6F952F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E6C98AB-9708-418A-A03E-87CA0F6F952F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E6C98AB-9708-418A-A03E-87CA0F6F952F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +273,8 @@ Global
 		{DEE08EE3-D4BF-427E-802B-76A5E0DC8E01} = {3F77221B-45A5-4DBE-B1D5-4C2DB7413C23}
 		{64569887-7763-408C-A3A2-9CC129717EBF} = {3F77221B-45A5-4DBE-B1D5-4C2DB7413C23}
 		{05762C90-0680-41EF-8B13-C71AEDCFFECD} = {3F77221B-45A5-4DBE-B1D5-4C2DB7413C23}
+		{2D82FC7C-2632-4D97-8ACC-C4B69825940B} = {7398605D-B477-4A79-B8EB-164A27F0FCB1}
+		{8E6C98AB-9708-418A-A03E-87CA0F6F952F} = {7398605D-B477-4A79-B8EB-164A27F0FCB1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0C3018DB-C0D9-4834-AD3A-C3FADDD3A9C9}

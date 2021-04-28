@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace MapMaker
 {
-    class SalonElement : MapObject
+    class SalonElement : MapObject, IComposite
     {
         private List<MapObject> elementen = new List<MapObject>();
 
         public SalonElement(Point salonLoc)
         {
 
-            elementen.Add(new CouchElement(new Point(2, 7), 3, '+'));
-            elementen.Add(new CouchElement(new Point(5, 9), 3, '+'));
+            elementen.Add(new CouchElement(new Point(2 + salonLoc.X, 7 + salonLoc.Y), 3, '+'));
+            elementen.Add(new CouchElement(new Point(5 + salonLoc.X, 9 + salonLoc.Y), 3, '+'));
 
             Location = salonLoc;
         }
@@ -26,6 +26,17 @@ namespace MapMaker
                 elementen[i].Paint();
             }
 
+        }
+
+        public void UpdateElements(Point offset)
+        {
+            for (int i = 0; i < elementen.Count; i++)
+            {
+                Point elementLoc = elementen[i].Location;
+                elementLoc.X += offset.X;
+                elementLoc.Y += offset.Y;
+                elementen[i].Location = elementLoc;
+            }
         }
     }
 }
