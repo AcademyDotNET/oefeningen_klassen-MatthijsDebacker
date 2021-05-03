@@ -6,16 +6,16 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public enum Direction
+    public enum Directions
     {
         Left = 37,
         Up = 38,
         Right = 39,
-        Down = 40
+        Down = 40,
+        Random = 50
     }
-
-    public interface IMoveable
+    interface IMoveable
     {
-        public void Move(Direction dir, int  dist = 1);
+        public void Move(Directions direction, int distance = 1);
     }
 }

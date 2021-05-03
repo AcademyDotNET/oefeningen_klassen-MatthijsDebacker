@@ -24,12 +24,12 @@ namespace Game
 
         public override bool Equals(object obj)
         {
-            if(obj == null || obj.GetType().BaseType != typeof(Point) && obj.GetType() != typeof(Point))
+            if (obj == null || obj.GetType().BaseType != typeof(Point) && obj.GetType() != typeof(Point))
             {
                 return false;
             }
 
-            if(X == ((Point)obj).X && Y == ((Point)obj).Y)
+            if (X == ((Point)obj).X && Y == ((Point)obj).Y)
             {
                 return true;
             }

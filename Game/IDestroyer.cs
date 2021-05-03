@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public interface IDestroyer
+    interface IDestroyer
     {
-        public void Shoot();
+        public void Shoot(MapElement target = null);
     }
 }

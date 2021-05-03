@@ -8,7 +8,7 @@ namespace Game
 {
     class Rock : MapElement
     {
-        public Rock(Point start, char drawC = 'O') : base(start, drawC)
+        public Rock(Point start, char drawC = 'O', ConsoleColor color = ConsoleColor.White) : base(start, drawC, color)
         {
         }
     }

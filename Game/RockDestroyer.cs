@@ -8,11 +8,11 @@ namespace Game
 {
     class RockDestroyer : Monster, IDestroyer
     {
-        public RockDestroyer(Point start, char drawC = 'O') : base(start, drawC)
+        public RockDestroyer(Point start, char drawC = 'D', ConsoleColor color = ConsoleColor.Red) : base(start, drawC, color)
         {
         }
 
-        public void Shoot()
+        public void Shoot(MapElement target = null)
         {
 
         }

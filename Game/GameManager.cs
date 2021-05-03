@@ -8,112 +8,147 @@ namespace Game
 {
     class GameManager
     {
-        public int GameHeight { get; set; }
-        public int GameWidth { get; set; }
-        public Player GamePlayer { get; }
-        public List<MapElement> Monsters { get; }
-        public List<MapElement> TerrainElements { get; set; }
-
         private Random rand;
+        public int GameWidth { get; set; }
+        public int GameHeight { get; set; }
+        public Point Margin { get; set; }
+        public Player GamePlayer { get; set; }
+        public List<Rock> Terrain { get; set; }
+        public List<Monster> Monsters { get; set; }
+        public bool GameWon { get; set; } = false;
 
-        public GameManager(Player player = null, int height = 30, int width = 30)
+        public GameManager(Point margin, int width = 20, int height = 20)
         {
-            Monsters = new List<MapElement>();
-            TerrainElements = new List<MapElement>();
-            GameHeight = height;
-            GameWidth = width;
             rand = new Random();
+            GameWidth = width;
+            GameHeight = height;
 
-            // Player initialization
-            if(player == null)
+            if(margin == null)
             {
-                GamePlayer = new Player(new Point(1,rand.Next(0, GameHeight)), 'X');
+                Margin = new Point();
             }
             else
             {
-                GamePlayer = player;
+                Margin = margin;
             }
 
-            // Basic game setup
+            GamePlayer = new Player(new Point(Margin.X + 1, Margin.Y + GameHeight / 2), 'X');
+
+            Terrain = new List<Rock>();
             GenerateTerrain(0.05);
+
+            Monsters = new List<Monster>();
             SpawnMonsters(5);
-            DrawTerrain();
         }
 
-        private void GenerateTerrain(double rockChance)
+        public void Update(ConsoleKey key)
         {
-            // Based on the rockChance, add rocks on the game field
-            double chance = 0;
-            for (int h = 0; h < GameHeight; h++)
+            // PLAYER
+            GamePlayer.InputKey = key;
+            GamePlayer.Update();
+
+            if (GamePlayer.Location.X <= Margin.X || GamePlayer.Location.Y <= Margin.Y || GamePlayer.Location.Y >= Margin.Y + GameHeight - 1)
             {
-                for (int w = 0; w < GameWidth; w++)
+                GamePlayer.SetBack();
+            }
+
+            foreach (MapElement rock in Terrain)
+            {
+                MapElement.Collision(GamePlayer, rock);
+            }
+
+            // MONSTERS
+            foreach (Monster monster in Monsters)
+            {
+                monster.Update();
+            }
+
+            foreach (MapElement monster in Monsters)
+            {
+                MapElement.Collision(GamePlayer, monster);
+
+                foreach (MapElement rock in Terrain)
                 {
-                    chance = rand.NextDouble();
-                    if(chance < rockChance && !GamePlayer.Location.Equals(new Point(w,h)))
-                    {
-                        TerrainElements.Add(new Rock(new Point(w, h)));
-                    }
+                    MapElement.Collision(monster, rock);
                 }
             }
+
+            if (GamePlayer.Location.X >= Margin.X + GameWidth * 2)
+            {
+                GameWon = true;
+            }
         }
 
-        private void SpawnMonsters(int nrMonsters)
+        public void Draw()
+        {
+            GamePlayer.Draw();
+
+            foreach (Monster monster in Monsters)
+            {
+                monster.Draw();
+            }
+        }
+
+        public void GenerateTerrain(double rockChance)
+        {
+            for (int w = Margin.X; w < Margin.X + GameWidth * 2; w++)
+            {
+                for (int h = Margin.Y; h < Margin.Y + GameHeight; h++)
+                {
+                    if(w == Margin.X || w == Margin.X + GameWidth * 2 - 1
+                        || h == Margin.Y || h == Margin.Y + GameHeight - 1)
+                    {
+                        Console.BackgroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.SetCursorPosition(w, h);
+                        Console.Write('W');
+                        Console.ResetColor();
+                    }
+                    else if(rand.NextDouble() < rockChance && (w % 2 == 0))
+                    {
+                        Rock rock = new Rock(new Point(w, h));
+                        Terrain.Add(rock);
+                        rock.Draw();
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(w, h);
+                        Console.Write(' ');
+                    }
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public void SpawnMonsters(int nrMonsters)
         {
             // Divide game field in sections based on nrMonsters and place a monster randomly in each section
-            //int dX = GameWidth / nrMonsters;
             int dY = GameWidth / nrMonsters;
-            // Add some distance to the section edges
-            int dist = 2;
 
             for (int i = 0; i < nrMonsters; i++)
             {
                 Monster monster;
                 // Pick a type at random
                 int type = rand.Next(0, 2);
-                if(type == 0)
+                if (type == 0)
                 {
-                    monster = new Monster(Point.RandomPoint(dist, GameWidth - dist, dist + i * dY, dY - dist + i * dY), 'M');
+                    monster = new Monster(Point.RandomPoint(Margin.X + 1, Margin.X + GameWidth * 2 - 1, Margin.Y + 1 + i * dY, Margin.Y + dY - 1 + i * dY), 'M');
                 }
                 else
                 {
-                    monster = new RockDestroyer(Point.RandomPoint(dist, GameWidth - dist, dist + i * dY, dY - dist + i * dY), 'D');
+                    monster = new RockDestroyer(Point.RandomPoint(Margin.X + 1, Margin.X + GameWidth * 2 - 1, Margin.Y + 1 + i * dY, Margin.Y + dY - 1 + i * dY), 'D');
                 }
 
-                for (int r = 0; r < TerrainElements.Count; r++)
+                for (int r = 0; r < Terrain.Count; r++)
                 {
-                    if (monster.Location.Equals(TerrainElements[r].Location))
+                    if (monster.Location.Equals(Terrain[r].Location))
                     {
-                        TerrainElements.RemoveAt(r);
+                        Terrain.RemoveAt(r);
                         r--;
                     }
                 }
 
                 Monsters.Add(monster);
-            }
-        }
-
-        public void Update()
-        {
-            GamePlayer.Update();
-
-        }
-
-        public void Draw()
-        {
-            GamePlayer.Draw();
-            foreach (MapElement monster in Monsters)
-            {
-                monster.Draw();
-            }
-
-            Console.SetCursorPosition(0, GameHeight);
-        }
-
-        public void DrawTerrain()
-        {
-            foreach (MapElement element in TerrainElements)
-            {
-                element.Draw();
             }
         }
     }

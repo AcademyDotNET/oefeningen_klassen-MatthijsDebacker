@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace Game
 {
@@ -7,15 +6,39 @@ namespace Game
     {
         static void Main(string[] args)
         {
-            List<MapElement> elements = new List<MapElement>();
-            GameManager manager = new GameManager();
+            Point margin = new Point(5, 5);
+            int gameWidth = 20;
+            int gameHeight = 20;
+            GameManager manager = new GameManager(margin, gameWidth, gameHeight);
 
+            ConsoleKeyInfo input = new ConsoleKeyInfo();
             do
             {
-                manager.Update();
+                manager.Update(input.Key);
                 manager.Draw();
-                System.Threading.Thread.Sleep(50);
-            } while (true);
+
+                Console.SetCursorPosition(0, margin.Y + gameHeight + 1);
+                Console.WriteLine(new string('=', margin.X + gameWidth * 2));
+                do
+                {
+                    input = Console.ReadKey();
+
+                } while (!CheckInput(input.Key));
+            } while (!manager.GameWon);
+        }
+
+        public static bool CheckInput(ConsoleKey key)
+        {
+            if (key == ConsoleKey.S 
+                || key == ConsoleKey.UpArrow
+                || key == ConsoleKey.RightArrow
+                || key == ConsoleKey.DownArrow
+                || key == ConsoleKey.LeftArrow)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

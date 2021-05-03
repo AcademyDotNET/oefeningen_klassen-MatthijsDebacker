@@ -8,52 +8,56 @@ namespace Game
 {
     class Player : MapElement, IMoveable, IDestroyer
     {
-        public Player(Point start, char drawC = 'O') : base(start, drawC)
+        private int health;
+        public int Health
         {
+            get
+            {
+                return health;
+            }
         }
 
-        public void Move(Direction dir, int dist = 1)
-        {
-            lastLocation.X = Location.X;
-            lastLocation.Y = Location.Y;
+        public ConsoleKey InputKey { get; set; }
 
-            switch (dir)
+        public Player(Point start, char drawC = 'X', ConsoleColor color = ConsoleColor.Blue) : base(start, drawC, color)
+        {
+            health = 10;
+        }
+
+        public void LoseHealth(int amount = 1)
+        {
+            health -= amount;
+        }
+
+        public override void Update()
+        {
+            Move((Directions)((int)InputKey));
+        }
+
+        public void Move(Directions direction, int distance = 1)
+        {
+            switch (direction)
             {
-                case Direction.Up:
-                    Location.Y -= dist;
+                case Directions.Up:
+                    Location.Y -= distance;
                     break;
-                case Direction.Right:
-                    Location.X += dist;
+                case Directions.Right:
+                    Location.X += distance;
                     break;
-                case Direction.Down:
-                    Location.Y += dist;
+                case Directions.Down:
+                    Location.Y += distance;
                     break;
-                case Direction.Left:
-                    Location.X -= dist;
+                case Directions.Left:
+                    Location.X -= distance;
                     break;
                 default:
                     break;
             }
         }
 
-        public void Shoot()
+        public void Shoot(MapElement target = null)
         {
             throw new NotImplementedException();
-        }
-
-        public override void Update()
-        {
-            if(Console.KeyAvailable)
-            {
-                Move((Direction)((int)Console.ReadKey().Key));
-            }
-        }
-
-        public override void Draw()
-        {
-            Console.ForegroundColor = ConsoleColor.Blue;
-            base.Draw();
-            Console.ResetColor();
         }
     }
 }
