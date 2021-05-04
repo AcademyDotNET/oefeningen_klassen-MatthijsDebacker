@@ -12,17 +12,21 @@ namespace KaartGokker
     {
         static void Main(string[] args)
         {
-            Stack<Speelkaart> cards = new Stack<Speelkaart>();
+            List<Speelkaart> cards = new List<Speelkaart>();
 
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 1; j <= 13; j++)
                 {
-                    cards.Push(new Speelkaart(j, (Suite)i));
+                    cards.Add(new Speelkaart(j, (Suite)i));
                 }
             }
 
             Stack<Speelkaart> shuffledCards = ShuffleCards(cards);
+            //foreach (var item in shuffledCards)
+            //{
+            //    Console.WriteLine(item.ToString());
+            //}
 
             //Console.WriteLine("Think of a card.");
             //foreach (Speelkaart card in shuffledCards)
@@ -45,7 +49,7 @@ namespace KaartGokker
                 input = Console.ReadLine();
                 inputCard = Speelkaart.StringToCard(input);
 
-                if(Speelkaart.StringToCard(input).Equals(shuffledCards.Peek()))
+                if (Speelkaart.StringToCard(input).Equals(shuffledCards.Peek()))
                 {
                     Console.Clear();
                     Console.WriteLine($"Correct! It was indeed: {shuffledCards.Peek()}.\nTry again...");
@@ -60,10 +64,20 @@ namespace KaartGokker
 
         }
 
-        public static Stack<Speelkaart> ShuffleCards(Stack<Speelkaart> cards)
+        public static Stack<Speelkaart> ShuffleCards(List<Speelkaart> cards)
         {
             Random rand = new Random();
-            return new Stack<Speelkaart>(cards.OrderBy(x => rand.Next()));
+            //return new Stack<Speelkaart>(cards.OrderBy(x => rand.Next()));
+            
+            Stack<Speelkaart> shuffledCards = new Stack<Speelkaart>();
+
+             while (cards.Count > 0)
+            {
+                int index = rand.Next(0, cards.Count );
+                shuffledCards.Push(cards[index]);
+                cards.RemoveAt(index);
+            }
+            return shuffledCards;
         }
     }
 }

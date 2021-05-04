@@ -24,11 +24,6 @@ namespace KaartGokker
 
         public int Number { get; set; }
         public Suite CardSuite { get; set; }
-        
-        public string CardToString()
-        {
-          return $"{NumberToString(Number)} of {CardSuite}";
-        }
 
         public string NumberToString(int number)
         {
@@ -42,7 +37,7 @@ namespace KaartGokker
             }
             else if (number == 12)
             {
-                return "queen";
+                return "Queen";
             }
             else if (number == 13)
             {
@@ -56,25 +51,7 @@ namespace KaartGokker
 
         public override string ToString()
         {
-            string number = Number.ToString();
-            if (Number == 1)
-            {
-                number = "Ace";
-            }
-            else if (Number == 11)
-            {
-                number = "Jack";
-            }
-            else if (Number == 12)
-            {
-                number = "Queen";
-            }
-            else if (Number == 13)
-            {
-                number = "King";
-            }
-
-            return $"{number} of {CardSuite}";
+            return $"{NumberToString(Number)} of {CardSuite}";
         }
 
         public override bool Equals(object obj)
