@@ -52,20 +52,35 @@ namespace Game
                 GamePlayer.SetBack();
             }
 
+            if (key == ConsoleKey.S)
+            {
+                ShootAt(GamePlayer.Shoot());
+            }
+
+            // Collision
             foreach (MapElement rock in Terrain)
             {
                 MapElement.Collision(GamePlayer, rock);
+            }
+            foreach (MapElement monster in Monsters)
+            {
+                MapElement.Collision(GamePlayer, monster);
             }
 
             // MONSTERS
             foreach (Monster monster in Monsters)
             {
                 monster.Update();
+                if (monster.Location.X <= Margin.X || monster.Location.Y <= Margin.Y || monster.Location.Y >= Margin.Y + GameHeight - 1 || monster.Location.X >= Margin.X + GameWidth * 2 - 1)
+                {
+                    monster.SetBack();
+                }
             }
 
+            // Collision
             foreach (MapElement monster in Monsters)
             {
-                MapElement.Collision(GamePlayer, monster);
+                MapElement.Collision(monster, GamePlayer);
 
                 foreach (MapElement rock in Terrain)
                 {
@@ -73,7 +88,7 @@ namespace Game
                 }
             }
 
-            if (GamePlayer.Location.X >= Margin.X + GameWidth * 2)
+            if (GamePlayer.Location.X >= Margin.X + GameWidth * 2 - 1)
             {
                 GameWon = true;
             }
@@ -149,6 +164,36 @@ namespace Game
                 }
 
                 Monsters.Add(monster);
+            }
+        }
+
+        public void ShootAt(Point target)
+        {
+            if(target.Equals(GamePlayer.Location))
+            {
+                GamePlayer.LoseHealth();
+                return;
+            }
+
+            for (int i = 0; i < Terrain.Count; i++)
+            {
+                if (target.Equals(Terrain[i].Location))
+                {
+                    Terrain.RemoveAt(i);
+                    Console.SetCursorPosition(target.X, target.Y);
+                    Console.Write(' ');
+                    return;
+                }
+            }
+            for (int i = 0; i < Monsters.Count; i++)
+            {
+                if (target.Equals(Monsters[i].Location))
+                {
+                    Monsters.RemoveAt(i);
+                    Console.SetCursorPosition(target.X, target.Y);
+                    Console.Write(' ');
+                    return;
+                }
             }
         }
     }

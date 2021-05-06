@@ -21,7 +21,6 @@ namespace KaartGokker
                     cards.Add(new Speelkaart(j, (Suite)i));
                 }
             }
-
             Stack<Speelkaart> shuffledCards = ShuffleCards(cards);
             //foreach (var item in shuffledCards)
             //{
@@ -71,7 +70,7 @@ namespace KaartGokker
             
             Stack<Speelkaart> shuffledCards = new Stack<Speelkaart>();
 
-             while (cards.Count > 0)
+            while (cards.Count > 0)
             {
                 int index = rand.Next(0, cards.Count );
                 shuffledCards.Push(cards[index]);

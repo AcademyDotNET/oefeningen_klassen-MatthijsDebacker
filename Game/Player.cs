@@ -55,9 +55,9 @@ namespace Game
             }
         }
 
-        public void Shoot(MapElement target = null)
+        public Point Shoot()
         {
-            throw new NotImplementedException();
+            return new Point(Location.X + 1, Location.Y);
         }
     }
 }

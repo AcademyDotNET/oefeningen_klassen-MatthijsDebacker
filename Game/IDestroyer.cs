@@ -8,6 +8,6 @@ namespace Game
 {
     interface IDestroyer
     {
-        public void Shoot(MapElement target = null);
+        public Point Shoot();
     }
 }

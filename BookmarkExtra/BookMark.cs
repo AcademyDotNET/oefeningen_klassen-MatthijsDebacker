@@ -20,7 +20,14 @@ namespace BookmarkExtra
             }
             else
             {
-                Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", URL);
+                try
+                {
+                    Process.Start(@"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe", URL);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                }
             }
         }
 

@@ -12,9 +12,14 @@ namespace Game
         {
         }
 
-        public void Shoot(MapElement target = null)
+        public override void Update()
         {
+            base.Update();
+        }
 
+        public Point Shoot()
+        {
+            return new Point(Location.X - 1, Location.Y);
         }
     }
 }

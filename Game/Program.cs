@@ -18,7 +18,11 @@ namespace Game
                 manager.Draw();
 
                 Console.SetCursorPosition(0, margin.Y + gameHeight + 1);
+                Console.ForegroundColor = ConsoleColor.Blue;
                 Console.WriteLine(new string('=', margin.X + gameWidth * 2));
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Player Health: {new string('*', manager.GamePlayer.Health)}");
+                Console.ResetColor();
                 do
                 {
                     input = Console.ReadKey();
