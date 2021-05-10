@@ -125,18 +125,6 @@ namespace SportSimulator
             }
         }
 
-
-
-        public void StelIn(string naam, double hoogte, int nummer, int matches, int hoogste, Klasses klasse)
-        {
-            Naam = naam;
-            Lengte = hoogte;
-            Nummer = nummer;
-            Matches = matches;
-            HoogsteScore = hoogste;
-            Klasse = klasse;
-        }
-
         public void SpeelMatch()
         {
             _matches++;
